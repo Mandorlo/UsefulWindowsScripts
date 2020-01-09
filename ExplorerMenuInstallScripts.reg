@@ -1,0 +1,38 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\Print2PDF]
+@="&print 2 PDF"
+
+[HKEY_CLASSES_ROOT\*\shell\Print2PDF\command]
+@="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_Print2PDF.ps1\" \"%1\""
+
+; =======================================================
+;               VIDEO
+; =======================================================
+[HKEY_CLASSES_ROOT\*\shell\Video]
+"Icon"="%systemroot%\\system32\\imageres.dll,18"
+"MUIVerb"="Video"
+"SubCommands"="noaudio;extractaudio;addsubs"
+"Position"="Top"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\noaudio]
+@="Remove audio"
+"Icon"="cmd.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\noaudio\command]
+@="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_RemoveAudio.ps1\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\extractaudio]
+@="Extract audio"
+"Icon"="%windir%\\system32\\wmploc.dll,62"
+;"Icon"="%SystemRoot%\\System32\\shell32.dll,-151"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\extractaudio\command]
+@="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_ExtractAudio.ps1\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\addsubs]
+@="Add subtitles"
+"Icon"="cmd.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\addsubs\command]
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_addsubs.py\" \"%1\""
