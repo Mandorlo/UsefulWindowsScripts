@@ -12,7 +12,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\Video]
 "Icon"="%systemroot%\\system32\\imageres.dll,18"
 "MUIVerb"="Video"
-"SubCommands"="noaudio;extractaudio;addsubs"
+"SubCommands"="noaudio;extractaudio;addsubs;videocut;deshake;compressiontest;compression;alterspeed"
 "Position"="Top"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\noaudio]
@@ -30,9 +30,50 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\extractaudio\command]
 @="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_ExtractAudio.ps1\" \"%1\""
 
+; Add subtitles
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\addsubs]
 @="Add subtitles"
 "Icon"="cmd.exe,0"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\addsubs\command]
 @="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_addsubs.py\" \"%1\""
+
+; Cut
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\videocut]
+@="Cut"
+"Icon"="cmd.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\videocut\command]
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_video_cut.py\" \"%1\""
+
+; Stabilize/deshake
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\deshake]
+@="Stabilize"
+"Icon"="cmd.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\deshake\command]
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_video_stabilize.py\" \"%1\""
+
+; Compression test
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compressiontest]
+@="Test compressions"
+"Icon"="cmd.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compressiontest\command]
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_video_compression.py\" --test \"%1\""
+
+; Compression
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compression]
+@="Compress"
+"Icon"="cmd.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compression\command]
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_video_compression.py\" \"%1\""
+
+; Alter speed
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\alterspeed]
+@="Alter speed"
+"Icon"="cmd.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\alterspeed\command]
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_video_alterspeed.py\" \"%1\""
