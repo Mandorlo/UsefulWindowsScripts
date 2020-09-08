@@ -1,6 +1,6 @@
 # New Setup
 
-* faire un git pull dans @dossier
+* faire un git pull dans @dossier et un npm install pour installer les dépendances
 * changer l'execution policy de PowerShell à "unrestricted"
 * créer/éditer la variable d'environnement utilisateur "PSModulePath" en ajoutant le chemin vers @dossier
 * vérifier que @dossier est bien dans le path en ouvrant PowerShell et en exécutant "$env:psmodulePath" pour voir ci @dossier apparaît

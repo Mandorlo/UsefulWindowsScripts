@@ -1,0 +1,24 @@
+{
+  "name": "windowsscripts",
+  "version": "1.0.0",
+  "description": "* faire un git pull dans @dossier\r * changer l'execution policy de PowerShell à \"unrestricted\"\r * créer/éditer la variable d'environnement utilisateur \"PSModulePath\" en ajoutant le chemin vers @dossier\r * vérifier que @dossier est bien dans le path en ouvrant PowerShell et en exécutant \"$env:psmodulePath\" pour voir ci @dossier apparaît",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mandorlo/UsefulWindowsScripts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mandorlo/UsefulWindowsScripts/issues"
+  },
+  "homepage": "https://github.com/Mandorlo/UsefulWindowsScripts#readme",
+  "dependencies": {
+    "moment": "^2.27.0",
+    "puppeteer": "^5.2.1",
+    "puppeteer-core": "^5.2.1"
+  }
+}

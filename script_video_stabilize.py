@@ -47,7 +47,7 @@ Video stabilization is run in 2 steps :
 """)
 
 # test mode ?
-user_input = input("Do you want to run in test mode ? [y/n] ")
+user_input = input("Do you want to run in test mode ? [y/N] ")
 test_str = "-t 7 " if user_input == 'y' or user_input == 'Y' else ""
 
 # Parameters

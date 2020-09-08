@@ -6,7 +6,6 @@ from pathlib import Path
 
 parser = argparse.ArgumentParser(description='Video cut')
 parser.add_argument('input_video', type=str, help='Input video')
-parser.add_argument('--quick', dest='quick', default=False, action='store_true')
 
 args = parser.parse_args()
 print(args)
