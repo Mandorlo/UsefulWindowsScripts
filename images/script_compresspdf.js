@@ -12,7 +12,16 @@ let fileToUpload = process.argv[2];
 let downloadDir = path.dirname(path.resolve(fileToUpload));
 console.log(downloadDir);
 
-(async () => {
+(async _ => {
+    try {
+        await run()
+    } catch(e) {
+        console.log(e)
+        lib.pressKeyToExit('An error occurred')
+    }
+})()
+
+async function run() {
     // let launchOptions = { headless: false, args: ['--start-maximized'] };
     let launchOptions = {};
     const browser = await puppeteer.launch(launchOptions)
@@ -44,7 +53,7 @@ console.log(downloadDir);
     await page.click('.toolpage #processTaskTextBtn')
     await navigationPromise
     console.log('running compression...')
-    while (await checkSelector('#upload-status', page)) {
+    while (await lib.checkSelector('#upload-status', page)) {
         let status = await page.evaluate((el) => document.querySelector('#upload-status > div.uploading__status__percent > div').innerText, page.$('#upload-status > div.uploading__status__percent > div'))
         console.log('running...', status)
         await page.waitFor(2000)
@@ -53,8 +62,7 @@ console.log(downloadDir);
     t = 12000 
     console.log('Downloading document...', Math.round(t/1000), 's');
     await page.waitFor(t)
-
     
     await browser.close()
-})()
+}
 

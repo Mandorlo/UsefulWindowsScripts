@@ -1,49 +1,81 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CLASSES_ROOT\*\shell\Print2PDF]
-@="&print 2 PDF"
+; [HKEY_CLASSES_ROOT\*\shell\Print2PDF]
+; @="&print 2 PDF"
 
-[HKEY_CLASSES_ROOT\*\shell\Print2PDF\command]
-@="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_Print2PDF.ps1\" \"%1\""
+; [HKEY_CLASSES_ROOT\*\shell\Print2PDF\command]
+; @="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_Print2PDF.ps1\" \"%1\""
+
+
+; =======================================================
+;               JPG
+; =======================================================
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.jpeg\Shell\Convert]
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
+"MUIVerb"="Convert"
+"SubCommands"="jpg2pdf"
+"Position"="Top"
+
+; JPG 2 PDF
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\jpg2pdf]
+@="to PDF"
+"Icon"="%windir%\\System32\\shell32.dll,277"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\jpg2pdf\command]
+@="C:\\Program Files\\nodejs\\node.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\images\\script_jpg2a4pdf.js\" \"%1\""
 
 ; =======================================================
 ;               PDF
 ; =======================================================
-[HKEY_CLASSES_ROOT\*\shell\PDF]
-"Icon"="%systemroot%\\system32\\imageres.dll,18"
-"MUIVerb"="PDF"
-"SubCommands"="compresspdf;mergepdf;scan"
+; [HKEY_CLASSES_ROOT\*\shell\PDF]
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\Shell\PDFTools]
+"Icon"="%systemroot%\\system32\\imageres.dll,22"
+"MUIVerb"="PDF Tools"
+"SubCommands"="compresspdf;mergepdf;scanpdf"
 "Position"="Top"
 
 ; Compress PDF
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compresspdf]
 @="Compress"
-"Icon"="%windir%\\System32\\shell32.dll,271"
+"Icon"="%windir%\\System32\\shell32.dll,310"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compresspdf\command]
-@="cmd /k node.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\images\\script_compresspdf.js\" \"%1\""
+@="C:\\Program Files\\nodejs\\node.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\images\\script_compresspdf.js\" \"%1\""
 
 ; Merge PDF
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\mergepdf]
 @="Merge"
-"Icon"="%windir%\\System32\\shell32.dll,272"
+"Icon"="%windir%\\System32\\shell32.dll,311"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\mergepdf\command]
-@="cmd /c node.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\images\\script_mergepdf.js\" \"%1\""
+@="C:\\Program Files\\nodejs\\node.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\images\\script_mergepdf.js\" \"%1\""
 
 ; Look like scan
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\scan]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\scanpdf]
 @="Scan"
-"Icon"="%windir%\\System32\\shell32.dll,273"
+"Icon"="%windir%\\System32\\shell32.dll,312"
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\scan\command]
-@="cmd /k node.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\images\\script_looklikescan.js\" \"%1\""
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\scanpdf\command]
+@="C:\\Program Files\\nodejs\\node.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\images\\script_looklikescan.js\" \"%1\""
 
 ; =======================================================
 ;               VIDEO
 ; =======================================================
-[HKEY_CLASSES_ROOT\*\shell\Video]
+; [HKEY_CLASSES_ROOT\*\shell\Video]
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.mp4\Shell\Tools]
 "Icon"="%systemroot%\\system32\\imageres.dll,18"
+"MUIVerb"="Video"
+"SubCommands"="noaudio;extractaudio;extractimg;addsubs;videocut;deshake;compressiontest;compression;alterspeed"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.mkv\Shell\Tools]
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
+"MUIVerb"="Video"
+"SubCommands"="noaudio;extractaudio;extractimg;addsubs;videocut;deshake;compressiontest;compression;alterspeed"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.avi\Shell\Tools]
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
 "MUIVerb"="Video"
 "SubCommands"="noaudio;extractaudio;extractimg;addsubs;videocut;deshake;compressiontest;compression;alterspeed"
 "Position"="Top"

@@ -5,6 +5,7 @@
 const fs        = require('fs');
 const path      = require('path');
 const puppeteer = require('puppeteer');
+const lib       = require('../libjs/lib');
 
 if (process.argv.length < 3) return pressKeyToExit('Missing file argument');
 if (process.argv[2].substr(-4).toLocaleLowerCase() != '.pdf') return pressKeyToExit(`File argument is not a pdf but a "${process.argv[2].substr(-4)}"`);
@@ -70,17 +71,8 @@ async function run() {
         run()
     } catch(e) {
         console.log(e)
-        // await browser.close()
+        lib.pressKeyToExit('An error occurred')
     }
 })()
 
-
-function pressKeyToExit(msg = '') {
-    if (msg != '') console.log(msg);
-    console.log('Press any key to exit');
-
-    process.stdin.setRawMode(true);
-    process.stdin.resume();
-    process.stdin.on('data', process.exit.bind(process, 0));
-}
 
