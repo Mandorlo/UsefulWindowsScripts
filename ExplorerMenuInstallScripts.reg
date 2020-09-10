@@ -86,7 +86,7 @@ Windows Registry Editor Version 5.00
 "Icon"="%windir%\\system32\\wmploc.dll,40"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\noaudio\command]
-@="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_RemoveAudio.ps1\" \"%1\""
+@="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_RemoveAudio.ps1\" \"%1\""
 
 ; Extract audio
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\extractaudio]
@@ -94,7 +94,7 @@ Windows Registry Editor Version 5.00
 "Icon"="%windir%\\system32\\wmploc.dll,24"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\extractaudio\command]
-@="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_ExtractAudio.ps1\" \"%1\""
+@="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_ExtractAudio.ps1\" \"%1\""
 
 ; Extract image
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\extractimg]
@@ -102,7 +102,7 @@ Windows Registry Editor Version 5.00
 "Icon"="cmd.exe,0"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\extractimg\command]
-@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_video_extractimg.py\" \"%1\""
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_video_extractimg.py\" \"%1\""
 
 ; Add subtitles
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\addsubs]
@@ -110,7 +110,7 @@ Windows Registry Editor Version 5.00
 "Icon"="cmd.exe,0"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\addsubs\command]
-@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_addsubs.py\" \"%1\""
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_addsubs.py\" \"%1\""
 
 ; Cut
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\videocut]
@@ -118,7 +118,7 @@ Windows Registry Editor Version 5.00
 "Icon"="%windir%\\System32\\shell32.dll,259"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\videocut\command]
-@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_video_cut.py\" \"%1\""
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_video_cut.py\" \"%1\""
 
 ; Stabilize/deshake
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\deshake]
@@ -126,7 +126,7 @@ Windows Registry Editor Version 5.00
 "Icon"="cmd.exe,0"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\deshake\command]
-@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_video_stabilize.py\" \"%1\""
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_video_stabilize.py\" \"%1\""
 
 ; Compression test
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compressiontest]
@@ -134,7 +134,7 @@ Windows Registry Editor Version 5.00
 "Icon"="cmd.exe,0"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compressiontest\command]
-@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_video_compression.py\" --test \"%1\""
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_video_compression.py\" --test \"%1\""
 
 ; Compression
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compression]
@@ -142,7 +142,7 @@ Windows Registry Editor Version 5.00
 "Icon"="cmd.exe,0"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compression\command]
-@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_video_compression.py\" \"%1\""
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_video_compression.py\" \"%1\""
 
 ; Alter speed
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\alterspeed]
@@ -150,4 +150,4 @@ Windows Registry Editor Version 5.00
 "Icon"="cmd.exe,0"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\alterspeed\command]
-@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\script_video_alterspeed.py\" \"%1\""
+@="py.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_video_alterspeed.py\" \"%1\""

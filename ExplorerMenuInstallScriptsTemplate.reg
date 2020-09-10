@@ -1,0 +1,90 @@
+Windows Registry Editor Version 5.00
+
+
+; =======================================================
+;               JPG
+; =======================================================
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.jpeg\Shell\Convert]
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
+"MUIVerb"="JPG Tools"
+"SubCommands"="<%= images.jpg.map(el => el.commandname).join(';'); %>"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.jpg\Shell\Convert]
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
+"MUIVerb"="JPG Tools"
+"SubCommands"="<%= images.jpg.map(el => el.commandname).join(';'); %>"
+"Position"="Top"
+
+
+<% for (let el of images.jpg) { %>
+; <%= el.title %>
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\<%= el.commandname %>]
+@="<%= el.title %>"
+"Icon"="<%= el.icon %>"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\<%= el.commandname %>\command]
+@="<%- el.command %>"
+<% } %>
+
+
+
+
+
+; =======================================================
+;               PDF
+; =======================================================
+; [HKEY_CLASSES_ROOT\*\shell\PDF]
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\Shell\PDFTools]
+"Icon"="%systemroot%\\system32\\imageres.dll,22"
+"MUIVerb"="PDF Tools"
+"SubCommands"="compresspdf;mergepdf;scanpdf"
+"Position"="Top"
+
+
+<% for (let el of pdf) { %>
+; <%= el.title %>
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\<%= el.commandname %>]
+@="<%= el.title %>"
+"Icon"="<%= el.icon %>"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\<%= el.commandname %>\command]
+@="<%- el.command %>"
+<% } %>
+
+
+
+
+
+; =======================================================
+;               VIDEO
+; =======================================================
+; [HKEY_CLASSES_ROOT\*\shell\Video]
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.mp4\Shell\Tools]
+"Icon"="%systemroot%\\system32\\imageres.dll,18"
+"MUIVerb"="Video"
+"SubCommands"="noaudio;extractaudio;extractimg;addsubs;videocut;deshake;compressiontest;compression;alterspeed"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.mkv\Shell\Tools]
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
+"MUIVerb"="Video"
+"SubCommands"="noaudio;extractaudio;extractimg;addsubs;videocut;deshake;compressiontest;compression;alterspeed"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.avi\Shell\Tools]
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
+"MUIVerb"="Video"
+"SubCommands"="noaudio;extractaudio;extractimg;addsubs;videocut;deshake;compressiontest;compression;alterspeed"
+"Position"="Top"
+
+
+<% for (let el of video) { %>
+; <%= el.title %>
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\<%= el.commandname %>]
+@="<%= el.title %>"
+"Icon"="<%= el.icon %>"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\<%= el.commandname %>\command]
+@="<%- el.command %>"
+<% } %>

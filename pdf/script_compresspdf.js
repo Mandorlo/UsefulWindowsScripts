@@ -1,3 +1,10 @@
+/**
+ * title: Compress
+ * icon: %systemroot%\\system32\\imageres.dll,22
+ * 
+ */
+
+
 const fs        = require('fs');
 const path      = require('path');
 const puppeteer = require('puppeteer');

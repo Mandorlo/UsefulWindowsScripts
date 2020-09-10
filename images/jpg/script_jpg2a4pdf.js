@@ -1,3 +1,9 @@
+/**
+ * title: to PDF
+ * icon: %systemroot%\\system32\\imageres.dll,21
+ * 
+ */
+
 const os        = require('os');
 const fs        = require('fs');
 const path      = require('path');

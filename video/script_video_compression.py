@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf8 -*-
 
+'''
+title: Compress
+
+Other commands
+-Test compressions:--test \"%1\"
+'''
+
 # TODO : in test mode, pick the random 7s in the middle of video (with -ss option), not beginning
 
 # README

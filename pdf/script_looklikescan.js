@@ -1,5 +1,9 @@
 /**
  * This script is a wrapper around the scanyourpdf.com online tool to simulate a document scan
+ * 
+ * title: Scan
+ * icon: %systemroot%\\system32\\imageres.dll,23
+ * 
  */
 
 const fs        = require('fs');

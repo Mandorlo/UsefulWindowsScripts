@@ -1,3 +1,8 @@
+<#
+title: Remove audio
+icon: %windir%\\system32\\wmploc.dll,40
+#>
+
 Write-Host $args[0]
 $FILE_PATH = [io.fileinfo]$args[0]
 

@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf8 -*-
 
+'''
+title: Add subtitles
+'''
+
 # ffmpeg -i .\Aladdin.1992.720p.BRrip.x264.YIFY.mp4 -i .\Aladdin.1992.720p.BRrip.x264.YIFY_EN.srt -i .\Aladdin.1992.720p.BRrip.x264.YIFY_FR.srt -i .\Aladdin.1992.720p.BRrip.x264.YIFY_IT.srt 
 #   -c:s mov_text -c:v copy -c:a copy 
 #   -map 0:v -map 0:a -map 1 -map 2 -map 3 -metadata:s:s:0 language=eng -metadata:s:s:1 language=fra -metadata:s:s:2 language=ita aladdin.mp4

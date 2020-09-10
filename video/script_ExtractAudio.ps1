@@ -1,3 +1,8 @@
+<#
+title: Extract audio
+icon: %windir%\\system32\\wmploc.dll,24
+#>
+
 Write-Host $args[0]
 $FILE_PATH = [io.fileinfo]$args[0]
 

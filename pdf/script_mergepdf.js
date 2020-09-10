@@ -1,3 +1,10 @@
+/**
+ * title: Merge multiple PDFs
+ * icon: %systemroot%\\system32\\imageres.dll,24
+ * 
+ */
+
+
 const os        = require('os');
 const fs        = require('fs');
 const path      = require('path');

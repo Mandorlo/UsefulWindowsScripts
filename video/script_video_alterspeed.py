@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf8 -*-
 
+'''
+title: Alter speed
+'''
+
 # atempo for audio : 
 # source : https://ffmpeg.org/ffmpeg-filters.html#atempo
 # example to speed up x2 : ffmpeg -i input.mkv -filter:a "atempo=2.0" -vn output.mkv

@@ -1,0 +1,145 @@
+Windows Registry Editor Version 5.00
+
+
+; =======================================================
+;               JPG
+; =======================================================
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.jpeg\Shell\Convert]
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
+"MUIVerb"="JPG Tools"
+"SubCommands"="jpg2a4pdf"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.jpg\Shell\Convert]
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
+"MUIVerb"="JPG Tools"
+"SubCommands"="jpg2a4pdf"
+"Position"="Top"
+
+
+
+; to PDF
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\jpg2a4pdf]
+@="to PDF"
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\jpg2a4pdf\command]
+@="C:\\Program Files\\nodejs\\node.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\images\\jpg\\script_jpg2a4pdf.js\" \"%1\""
+
+
+
+
+
+
+; =======================================================
+;               PDF
+; =======================================================
+; [HKEY_CLASSES_ROOT\*\shell\PDF]
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\Shell\PDFTools]
+"Icon"="%systemroot%\\system32\\imageres.dll,22"
+"MUIVerb"="PDF Tools"
+"SubCommands"="compresspdf;mergepdf;scanpdf"
+"Position"="Top"
+
+
+
+; Compress
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compresspdf]
+@="Compress"
+"Icon"="%systemroot%\\system32\\imageres.dll,22"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\compresspdf\command]
+@="C:\\Program Files\\nodejs\\node.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\pdf\\script_compresspdf.js\" \"%1\""
+
+; Scan
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\looklikescan]
+@="Scan"
+"Icon"="%systemroot%\\system32\\imageres.dll,23"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\looklikescan\command]
+@="C:\\Program Files\\nodejs\\node.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\pdf\\script_looklikescan.js\" \"%1\""
+
+; Merge multiple PDFs
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\mergepdf]
+@="Merge multiple PDFs"
+"Icon"="%systemroot%\\system32\\imageres.dll,24"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\mergepdf\command]
+@="C:\\Program Files\\nodejs\\node.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\pdf\\script_mergepdf.js\" \"%1\""
+
+
+
+
+
+
+; =======================================================
+;               VIDEO
+; =======================================================
+; [HKEY_CLASSES_ROOT\*\shell\Video]
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.mp4\Shell\Tools]
+"Icon"="%systemroot%\\system32\\imageres.dll,18"
+"MUIVerb"="Video"
+"SubCommands"="noaudio;extractaudio;extractimg;addsubs;videocut;deshake;compressiontest;compression;alterspeed"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.mkv\Shell\Tools]
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
+"MUIVerb"="Video"
+"SubCommands"="noaudio;extractaudio;extractimg;addsubs;videocut;deshake;compressiontest;compression;alterspeed"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.avi\Shell\Tools]
+"Icon"="%systemroot%\\system32\\imageres.dll,21"
+"MUIVerb"="Video"
+"SubCommands"="noaudio;extractaudio;extractimg;addsubs;videocut;deshake;compressiontest;compression;alterspeed"
+"Position"="Top"
+
+
+
+; Add subtitles
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\addsubs]
+@="Add subtitles"
+"Icon"="cmd.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\addsubs\command]
+@="C:\\Users\\carlo\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_addsubs.py\" \"%1\""
+
+; Extract audio
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\ExtractAudio]
+@="Extract audio"
+"Icon"="%windir%\\system32\\wmploc.dll,24"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\ExtractAudio\command]
+@="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_ExtractAudio.ps1\" \"%1\""
+
+; Remove audio
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\RemoveAudio]
+@="Remove audio"
+"Icon"="%windir%\\system32\\wmploc.dll,40"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\RemoveAudio\command]
+@="Powershell.exe -File \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_RemoveAudio.ps1\" \"%1\""
+
+; Alter speed
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\video_alterspeed]
+@="Alter speed"
+"Icon"="cmd.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\video_alterspeed\command]
+@="C:\\Users\\carlo\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_video_alterspeed.py\" \"%1\""
+
+; Compress
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\video_compression]
+@="Compress"
+"Icon"="cmd.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\video_compression\command]
+@="C:\\Users\\carlo\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_video_compression.py\" \"%1\""
+
+; Test compressions
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\]
+@="Test compressions"
+"Icon"="cmd.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\\command]
+@="C:\\Users\\carlo\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe \"C:\\Users\\carlo\\Documents\\Projets\\WindowsScripts\\video\\script_video_compression.py\" --test \"%1\""
